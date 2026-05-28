@@ -3,23 +3,30 @@
 Extension hẹn giờ tự động:
 1. End cuộc họp Zoom.
 2. Chuyển sang tab Zalo Web đang mở sẵn.
-3. Bấm nút gửi tin nhắn trên Zalo.
+3. Bấm nút gửi tin nhắn (`.send-msg-btn`) trên Zalo.
 
-## Tính năng
+## Tải nhanh bản ZIP
 
-- Hẹn giờ theo phút/giây.
-- Countdown trong popup extension.
-- Countdown nổi trên trang (góc phải trên), có thể kéo thả và nhớ vị trí.
-- Tự tìm tab Zoom/Zalo theo URL, không phụ thuộc tab đang mở lúc hết giờ.
-- Dùng `chrome.alarms` để hẹn giờ ổn định hơn cho mốc dài.
+Tải source tại [tại đây](https://codeload.github.com/Huynd2097/Zoom_Zalo/zip/refs/heads/main).
+
+Sau khi tải:
+1. Giải nén file ZIP.
+2. Bạn sẽ có thư mục dạng `Zoom_Zalo-main`.
+3. Dùng chính thư mục này để nạp extension (`Load unpacked`).
 
 ## Cài đặt (Load unpacked)
 
-1. Tải source về máy.
-2. Mở Chrome và vào `chrome://extensions`.
-3. Bật `Developer mode`.
-4. Chọn `Load unpacked` và trỏ vào thư mục dự án này.
+1. Mở Chrome và vào `chrome://extensions`.
+2. Bật `Developer mode`.
+3. Chọn `Load unpacked`.
+4. Trỏ đến thư mục đã giải nén (ví dụ: `Zoom_Zalo-main`).
 5. Pin extension lên thanh công cụ (tuỳ chọn).
+
+Cảnh báo chọn nhầm thư mục:
+- Không chọn thư mục ngoài cùng chỉ chứa thư mục con.
+- Không chọn file `.zip`.
+- Hãy chọn đúng thư mục có file `manifest.json` nằm trực tiếp bên trong.
+- Nếu Chrome báo lỗi `Manifest file is missing or unreadable`, gần như chắc chắn bạn đã chọn sai thư mục.
 
 ## Cách dùng
 
@@ -30,6 +37,14 @@ Extension hẹn giờ tự động:
 5. Đến giờ, extension sẽ:
    - Chuyển sang tab Zoom và End meeting.
    - Chuyển sang tab Zalo và bấm Send.
+
+## Tính năng
+
+- Hẹn giờ theo phút/giây.
+- Countdown trong popup extension.
+- Countdown nổi trên trang (góc phải trên), có thể kéo thả và nhớ vị trí.
+- Tự tìm tab Zoom/Zalo theo URL, không phụ thuộc tab đang mở lúc hết giờ.
+- Dùng `chrome.alarms` để hẹn giờ ổn định hơn cho mốc dài.
 
 ## Lưu ý quan trọng
 
@@ -77,3 +92,4 @@ Nếu muốn phát hành public:
 ## License
 
 Bạn có thể thêm license tùy ý (MIT khuyến nghị cho dự án chia sẻ cộng đồng).
+
