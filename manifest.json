@@ -1,0 +1,30 @@
+﻿{
+  "manifest_version": 3,
+  "name": "Zoom -> Zalo Auto Scheduler",
+  "version": "1.0.0",
+  "description": "Hen gio roi Zoom, chuyen sang Zalo Web va gui tin nhan.",
+  "permissions": ["tabs", "storage", "scripting", "alarms"],
+  "host_permissions": [
+    "https://*.zoom.us/*",
+    "https://chat.zalo.me/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Zoom -> Zalo"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.zoom.us/*"],
+      "js": ["zoom-content.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://chat.zalo.me/*"],
+      "js": ["zalo-content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
